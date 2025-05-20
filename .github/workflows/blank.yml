@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install pkg
-        run: sudo apt-get install cabextract wimtools chntpw genisoimage -y
+        run: sudo apt-get install cabextract wimtools chntpw genisoimage tree -y
 
       - name: Chmod
         run: chmod +x ./uup_download_linux.sh
@@ -36,3 +36,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a script
         run: ./uup_download_linux.sh
+
+       # Runs a set of commands using the runners shell
+      - name: Tree
+        run: tree .
